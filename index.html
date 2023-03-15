@@ -1,0 +1,676 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <!-- Required meta tags -->
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+
+  <!-- Bootstrap CSS -->
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet"
+    integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous" />
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.3.0/css/all.min.css" />
+  <link />
+  <script type="text/javascript" src="./main.js"></script>
+  <style>
+    * {
+      list-style: none;
+    }
+
+    .dropdown:hover .dropdown-menu {
+      display: block;
+    }
+
+    #header-navbar {
+      font-size: 12px;
+      background-color: blueviolet;
+    }
+
+    #dropdownMenuButton2 {
+      font-size: 12px;
+    }
+
+    .cursor-pointer {
+      cursor: pointer;
+    }
+
+    #header-navbar {
+      background-color: #83b735;
+    }
+
+    #search-drop-menu {
+      border: none;
+      border-radius: 0%;
+      border-right: 1px solid rgb(193, 193, 193);
+    }
+
+    #header-search-bar {
+      border: none;
+      border-right: 1px solid rgb(193, 193, 193);
+    }
+
+    #header-menu-middle-child {
+      width: 50%;
+    }
+
+    #sign-in-up {
+      font-size: 14px;
+    }
+
+    #header-price {
+      font-size: 14px;
+    }
+
+    @keyframes slideaway {
+      from {
+        display: block;
+      }
+
+      to {
+        transform: translateX(10px);
+        opacity: 0;
+      }
+    }
+
+    #mySidenav {
+      transition: opacity 200ms, display 200ms;
+      display: none;
+      opacity: 1;
+      z-index: 50;
+    }
+
+    #leftSideMenu {
+      display: none;
+    }
+
+    .carousel-item {
+      height: 500px;
+    }
+
+    .carousel-control-next,
+    .carousel-control-prev {
+      width: 5%;
+    }
+
+    #side-category {
+      background-color: #83b735;
+    }
+
+    #content-category {
+      padding-left: 100px;
+      padding-right: 100px;
+    }
+
+    #category-right-child {
+      font-size: 14px;
+    }
+
+    #side-category {
+      font-size: 14px;
+    }
+
+    #side-category-menu {
+      top: 210px;
+      left: 100px;
+      z-index: 50;
+    }
+
+    #side-category-menu-drop button {
+      border-radius: 0%;
+      border: none;
+    }
+    #denemebutton{
+      padding-right: 100px;
+    }
+
+    .dropdown:hover .dropdown-menu {
+      display: block;
+    }
+    .sidebar-category-menu-item{
+      margin-left: 200px;
+      width: 600px;
+      height: 300px;
+    }
+    #leftSideMenu{
+      z-index: 50;
+    }
+
+  </style>
+  <title>Hello, world!</title>
+</head>
+
+<body>
+  <nav id="header-navbar"
+    class="px-5 primary-nav d-flex justify-content-lg-between align-items-center justify-content-center">
+    <!-- RIGT CHİLD -->
+    <div class="header-navbar d-flex justify-content-between align-items-center text-white">
+      <div class="dropdown border-end border-start d-none d-lg-block">
+        <button class="btn bg-transparent text-white py-3" type="button" id="dropdownMenuButton2"
+          data-bs-toggle="dropdown" aria-expanded="false">
+          ENGLISH
+          <i class="fa-solid fa-chevron-down"></i>
+        </button>
+        <ul class="dropdown-menu dropdown-menu-white" aria-labelledby="dropdownMenuButton2">
+          <li><a class="dropdown-item active" href="#">Action</a></li>
+          <li><a class="dropdown-item" href="#">Another action</a></li>
+          <li><a class="dropdown-item" href="#">Something else here</a></li>
+          <li>
+            <hr class="dropdown-divider" />
+          </li>
+          <li><a class="dropdown-item" href="#">Separated link</a></li>
+        </ul>
+      </div>
+
+      <div class="dropdown border-end d-none d-lg-block">
+        <button class="btn bg-transparent text-white py-3" type="button" id="dropdownMenuButton2"
+          data-bs-toggle="dropdown" aria-expanded="false">
+          COUNTRY
+          <i class="fa-solid fa-chevron-down"></i>
+        </button>
+        <ul class="dropdown-menu dropdown-menu-white" aria-labelledby="dropdownMenuButton2">
+          <li><a class="dropdown-item active" href="#">Action</a></li>
+          <li><a class="dropdown-item" href="#">Another action</a></li>
+          <li><a class="dropdown-item" href="#">Something else here</a></li>
+          <li>
+            <hr class="dropdown-divider" />
+          </li>
+          <li><a class="dropdown-item" href="#">Separated link</a></li>
+        </ul>
+      </div>
+      <div id="navbar-text" class="px-3 d-none d-lg-block">
+        FREE SHIPPING FOR ALL ORDERS OF $150
+      </div>
+    </div>
+
+    <!-- LEFT CHİLD -->
+    <div class="d-flex items-center">
+      <div class="p-3 d-flex align-items-center gap-3 bg-transparent text-white border-lg-end">
+        <i id="deneme" class="fa-brands fa-facebook-f cursor-pointer"></i>
+        <i class="fa-brands fa-twitter cursor-pointer"></i>
+        <i class="fa-brands fa-instagram cursor-pointer"></i>
+        <i class="fa-brands fa-youtube cursor-pointer"></i>
+        <i class="fa-brands fa-pinterest cursor-pointer"></i>
+      </div>
+      <div
+        class="p-3 d-flex align-items-center gap-2 bg-transparent text-white border-end cursor-pointer d-lg-none d-none d-lg-block">
+        <div>
+          <i class="fa-regular fa-envelope"></i>
+        </div>
+        <div>NEWSLETTER</div>
+      </div>
+      <div class="p-3 bg-transparent text-white border-end cursor-pointer d-none d-lg-block">
+        CONTACT US
+      </div>
+      <div class="p-3 bg-transparent text-white border-end cursor-pointer d-none d-lg-block">
+        FAQS
+      </div>
+    </div>
+  </nav>
+
+  <!-- Header area -->
+  <div class="d-flex align-items-center justify-content-around py-4 px-md-1 px-xl-5 border-bottom">
+    <div class="d-lg-none d-block">
+      <i id="sideHamburgermenu" class="fa-solid fa-bars"></i>
+    </div>
+
+    <!-- LEFT CHILD -->
+    <div>
+      <img class="img-fluid" src="assets/logo.png" />
+    </div>
+
+    <!-- MIDDLE CHILD -->
+    <div id="header-menu-middle-child" class="align-items-center border d-none d-lg-flex">
+      <div class="input-group">
+        <input placeholder="Search for products" id="header-search-bar" type="text" class="form-control"
+          aria-label="Text input with dropdown button" />
+        <button class="btn btn-outline-secondary dropdown-toggle" id="search-drop-menu" type="button"
+          data-bs-toggle="dropdown" aria-expanded="false">
+          Select Category
+        </button>
+        <ul class="dropdown-menu dropdown-menu-end">
+          <li><a class="dropdown-item" href="#">Action</a></li>
+          <li><a class="dropdown-item" href="#">Another action</a></li>
+          <li><a class="dropdown-item" href="#">Something else here</a></li>
+          <li>
+            <hr class="dropdown-divider" />
+          </li>
+          <li><a class="dropdown-item" href="#">Separated link</a></li>
+        </ul>
+      </div>
+      <div class="px-3">
+        <i class="fa-solid fa-magnifying-glass"></i>
+      </div>
+    </div>
+
+    <!-- RIGHT CHILD -->
+    <i id="SideNavMobile" class="fa-solid fa-basket-shopping d-block d-lg-none"></i>
+    <div class="d-flex align-items-center justify-content-center d-none d-lg-block">
+      <ul class="d-flex align-items-center gap-3 mt-3">
+        <li id="sign-in-up" class="d-none d-lg-block cursor-pointer">
+          LOGIN/REGISTER
+        </li>
+        <li>
+          <i class="fa-regular fa-heart d-none d-lg-block cursor-pointer"></i>
+        </li>
+        <li>
+          <i class="fa-solid fa-shuffle d-none d-lg-block cursor-pointer"></i>
+        </li>
+        <li id="SideNav" class="d-flex align-items-center gap-2 cursor-pointer">
+          <div>
+            <i class="fa-solid fa-basket-shopping"></i>
+          </div>
+          <div id="header-price" class="d-none d-lg-block">
+            <div>$0.00</div>
+          </div>
+        </li>
+      </ul>
+    </div>
+  </div>
+
+  <div id="mySidenav" class="h-100 position-fixed bg-white position-absolute top-0 end-0 w-75 w-lg-25 position-absolute">
+    <div class="border-bottom">
+      <div class="d-flex alig-items-center justify-content-between px-4 py-3">
+        <div class="h5">Shopping Cart</div>
+        <div id="closeSideNav" class="d-flex align-items-center gap-2 cursor-pointer">
+          <div>Close</div>
+          <i class="fa-solid fa-xmark mt-1"></i>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- LEFT MOBILE SIDE MENU -->
+  <div id="leftSideMenu"
+    class="h-100 bg-primary position-absolute top-0 start-0 w-75 w-lg-25 position-absolute d-lg-none ">
+    <div id="myLeftMenuContainer" class="d-flex">kapat</div>
+  </div>
+
+  <div id="content-category" class="d-lg-flex align-items-center justify-content-between d-none ">
+    <div class="d-flex align-items-center">
+      <div id="side-category" class="d-flex align-items-center gap-2 p-3 text-white">
+        <i class="fa-solid fa-bars"></i>
+        <div class="">BROWSER CATEGIRIES</div>
+        <div class="ms-3">
+          <i class="fa-solid fa-chevron-down"></i>
+        </div>
+      </div>
+      <div>
+        <div class="dropdown d-none d-lg-block">
+          <button class="btn bg-transparent py-2" type="button" id="dropdownMenuButton2" data-bs-toggle="dropdown"
+            aria-expanded="false">
+            HOME
+            <i class="fa-solid fa-chevron-down"></i>
+          </button>
+          <ul class="dropdown-menu dropdown-menu-white mt-2" aria-labelledby="dropdownMenuButton2">
+            <li><a class="dropdown-item active" href="#">Action</a></li>
+            <li><a class="dropdown-item" href="#">Another action</a></li>
+            <li><a class="dropdown-item" href="#">Something else here</a></li>
+            <li>
+              <hr class="dropdown-divider" />
+            </li>
+            <li><a class="dropdown-item" href="#">Separated link</a></li>
+          </ul>
+        </div>  
+              
+      </div>
+      <div>
+        <div class="dropdown d-none d-lg-block">
+          <button class="btn bg-transparent py-2" type="button" id="dropdownMenuButton2" data-bs-toggle="dropdown"
+            aria-expanded="false">
+            SHOP
+            <i class="fa-solid fa-chevron-down"></i>
+          </button>
+          <ul class="dropdown-menu dropdown-menu-white mt-2" aria-labelledby="dropdownMenuButton2">
+            <li><a class="dropdown-item active" href="#">Action</a></li>
+            <li><a class="dropdown-item" href="#">Another action</a></li>
+            <li><a class="dropdown-item" href="#">Something else here</a></li>
+            <li>
+              <hr class="dropdown-divider" />
+            </li>
+            <li><a class="dropdown-item" href="#">Separated link</a></li>
+          </ul>
+        </div>  
+              
+      </div>
+      <div>
+        <div class="dropdown d-none d-lg-block">
+          <button class="btn bg-transparent py-2" type="button" id="dropdownMenuButton2" data-bs-toggle="dropdown"
+            aria-expanded="false">
+            BLOG
+            <i class="fa-solid fa-chevron-down"></i>
+          </button>
+          <ul class="dropdown-menu dropdown-menu-white mt-2" aria-labelledby="dropdownMenuButton2">
+            <li><a class="dropdown-item active" href="#">Action</a></li>
+            <li><a class="dropdown-item" href="#">Another action</a></li>
+            <li><a class="dropdown-item" href="#">Something else here</a></li>
+            <li>
+              <hr class="dropdown-divider" />
+            </li>
+            <li><a class="dropdown-item" href="#">Separated link</a></li>
+          </ul>
+        </div>  
+              
+      </div>
+      <div>
+        <div class="dropdown d-none d-lg-block">
+          <button class="btn bg-transparent py-2" type="button" id="dropdownMenuButton2" data-bs-toggle="dropdown"
+            aria-expanded="false">
+            PAGES
+            <i class="fa-solid fa-chevron-down"></i>
+          </button>
+          <ul class="dropdown-menu dropdown-menu-white mt-2" aria-labelledby="dropdownMenuButton2">
+            <li><a class="dropdown-item active" href="#">Action</a></li>
+            <li><a class="dropdown-item" href="#">Another action</a></li>
+            <li><a class="dropdown-item" href="#">Something else here</a></li>
+            <li>
+              <hr class="dropdown-divider" />
+            </li>
+            <li><a class="dropdown-item" href="#">Separated link</a></li>
+          </ul>
+        </div>  
+              
+      </div>
+      <div>
+        <div class="dropdown d-none d-lg-block">
+          <button class="btn bg-transparent py-2" type="button" id="dropdownMenuButton2" data-bs-toggle="dropdown"
+            aria-expanded="false">
+            ELEMENTS
+            <i class="fa-solid fa-chevron-down"></i>
+          </button>
+          <ul class="dropdown-menu dropdown-menu-white mt-2" aria-labelledby="dropdownMenuButton2">
+            <li><a class="dropdown-item active" href="#">Action</a></li>
+            <li><a class="dropdown-item" href="#">Another action</a></li>
+            <li><a class="dropdown-item" href="#">Something else here</a></li>
+            <li>
+              <hr class="dropdown-divider" />
+            </li>
+            <li><a class="dropdown-item" href="#">Separated link</a></li>
+          </ul>
+        </div>  
+              
+      </div>
+      <div>
+        <div class="dropdown d-none d-lg-block">
+          <button class="btn bg-transparent py-2" type="button" id="dropdownMenuButton2" data-bs-toggle="dropdown"
+            aria-expanded="false">
+            BUY
+            <i class="fa-solid fa-chevron-down"></i>
+          </button>
+          <ul class="dropdown-menu dropdown-menu-white mt-2" aria-labelledby="dropdownMenuButton2">
+            <li><a class="dropdown-item active" href="#">Action</a></li>
+            <li><a class="dropdown-item" href="#">Another action</a></li>
+            <li><a class="dropdown-item" href="#">Something else here</a></li>
+            <li>
+              <hr class="dropdown-divider" />
+            </li>
+            <li><a class="dropdown-item" href="#">Separated link</a></li>
+          </ul>
+        </div>  
+              
+      </div>
+    </div>
+    <div id="category-right-child" class="d-flex gap-2">
+      <div class="border-end pe-2">SPECIAL OFFER</div>
+      <div>PURCHASE THEME</div>
+    </div>
+  </div>
+  <!-- <div id="side-category-menu-drop"  class="btn-group dropend">
+    <button type="button" class="btn btn-secondary text-dark bg-white text-black dropdown-toggle" data-bs-toggle="dropdown" aria-expanded="false">
+      Dropright
+    </button>
+    <ul class="dropdown-menu">
+      <li>sadfasfdsdsdf</li>
+    </ul>
+  </div>  -->
+
+  <div id="side-category-menu" class="position-absolute border d-none d-lg-block">
+
+    <!-- MENU ITEM -->
+    <div class="d-flex align-items-center bg-white gap-1 px-2 py-2  dropdown">
+      <div class="dropdown d-flex align-items-center ">
+        <div>
+          <i class="fa-solid fa-chair"></i>
+        </div>
+        <div id="side-category-menu-drop" class="btn-group dropend ms-1">
+          <button type="button" class="btn btn-secondary text-dark bg-white text-black pe-5" data-bs-toggle="dropdown"
+            aria-expanded="false">
+            Dropright
+          </button>
+          <ul class="sidebar-category-menu-item dropdown-menu ">
+            <li>sadfasfdsdsdf</li>
+          </ul>
+        </div>
+      </div>
+      <div class="ms-5">
+        <i class="fa-solid fa-angle-right"></i>
+      </div>
+    </div>
+    <div class="d-flex align-items-center bg-white gap-1 px-2 py-2 border-top dropdown">
+      <div class="dropdown d-flex align-items-center ">
+        <div>
+          <i class="fa-solid fa-chair"></i>
+        </div>
+        <div id="side-category-menu-drop" class="btn-group dropend ms-1">
+          <button type="button" class="btn btn-secondary text-dark bg-white text-black pe-5" data-bs-toggle="dropdown"
+            aria-expanded="false">
+            Dropright
+          </button>
+          <ul class="sidebar-category-menu-item dropdown-menu ">
+            <li>sadfasfdsdsdf</li>
+          </ul>
+        </div>
+      </div>
+      <div class="ms-5">
+        <i class="fa-solid fa-angle-right"></i>
+      </div>
+    </div>
+    <div class="d-flex align-items-center bg-white gap-1 px-2 py-2 border-top dropdown">
+      <div class="dropdown d-flex align-items-center ">
+        <div>
+          <i class="fa-solid fa-chair"></i>
+        </div>
+        <div id="side-category-menu-drop" class="btn-group dropend ms-1">
+          <button type="button" class="btn btn-secondary text-dark bg-white text-black pe-5" data-bs-toggle="dropdown"
+            aria-expanded="false">
+            Dropright
+          </button>
+          <ul class="sidebar-category-menu-item dropdown-menu ">
+            <li>sadfasfdsdsdf</li>
+          </ul>
+        </div>
+      </div>
+      <div class="ms-5">
+        <i class="fa-solid fa-angle-right"></i>
+      </div>
+    </div>
+    <div class="d-flex align-items-center bg-white gap-1 px-2 py-2 border-top dropdown">
+      <div class="dropdown d-flex align-items-center ">
+        <div>
+          <i class="fa-solid fa-chair"></i>
+        </div>
+        <div id="side-category-menu-drop" class="btn-group dropend ms-1">
+          <button type="button" class="btn btn-secondary text-dark bg-white text-black pe-5" data-bs-toggle="dropdown"
+            aria-expanded="false">
+            Dropright
+          </button>
+          <ul class="sidebar-category-menu-item dropdown-menu ">
+            <li>sadfasfdsdsdf</li>
+          </ul>
+        </div>
+      </div>
+      <div class="ms-5">
+        <i class="fa-solid fa-angle-right"></i>
+      </div>
+    </div>
+    <div class="d-flex align-items-center bg-white gap-1 px-2 py-2 border-top dropdown">
+      <div class="dropdown d-flex align-items-center ">
+        <div>
+          <i class="fa-solid fa-chair"></i>
+        </div>
+        <div id="side-category-menu-drop" class="btn-group dropend ms-1">
+          <button type="button" class="btn btn-secondary text-dark bg-white text-black pe-5" data-bs-toggle="dropdown"
+            aria-expanded="false">
+            Dropright
+          </button>
+          <ul class="sidebar-category-menu-item dropdown-menu ">
+            <li>sadfasfdsdsdf</li>
+          </ul>
+        </div>
+      </div>
+      <div class="ms-5">
+        <i class="fa-solid fa-angle-right"></i>
+      </div>
+    </div>
+    <div class="d-flex align-items-center bg-white gap-1 px-2 py-2 border-top dropdown">
+      <div class="dropdown d-flex align-items-center ">
+        <div>
+          <i class="fa-solid fa-chair"></i>
+        </div>
+        <div id="side-category-menu-drop" class="btn-group dropend ms-1">
+          <button type="button" class="btn btn-secondary text-dark bg-white text-black pe-5" data-bs-toggle="dropdown"
+            aria-expanded="false">
+            Dropright
+          </button>
+          <ul class="sidebar-category-menu-item dropdown-menu ">
+            <li>sadfasfdsdsdf</li>
+          </ul>
+        </div>
+      </div>
+      <div class="ms-5">
+        <i class="fa-solid fa-angle-right"></i>
+      </div>
+    </div>
+    <div class="d-flex align-items-center bg-white gap-1 px-2 py-2 border-top dropdown">
+      <div class="dropdown d-flex align-items-center ">
+        <div>
+          <i class="fa-solid fa-chair"></i>
+        </div>
+        <div id="side-category-menu-drop" class="btn-group dropend ms-1">
+          <button type="button" class="btn btn-secondary text-dark bg-white text-black pe-5" data-bs-toggle="dropdown"
+            aria-expanded="false">
+            Dropright
+          </button>
+          <ul class="sidebar-category-menu-item dropdown-menu ">
+            <li>sadfasfdsdsdf</li>
+          </ul>
+        </div>
+      </div>
+      <div class="ms-5">
+        <i class="fa-solid fa-angle-right"></i>
+      </div>
+    </div>
+    <div class="d-flex align-items-center bg-white gap-1 px-2 py-2 border-top dropdown">
+      <div class="dropdown d-flex align-items-center ">
+        <div>
+          <i class="fa-solid fa-chair"></i>
+        </div>
+        <div id="side-category-menu-drop" class="btn-group dropend ms-1">
+          <button type="button" class="btn btn-secondary text-dark bg-white text-black pe-5" data-bs-toggle="dropdown"
+            aria-expanded="false">
+            Dropright
+          </button>
+          <ul class="sidebar-category-menu-item dropdown-menu ">
+            <li>sadfasfdsdsdf</li>
+          </ul>
+        </div>
+      </div>
+      <div class="ms-5">
+        <i class="fa-solid fa-angle-right"></i>
+      </div>
+    </div>
+
+    <!-- MENU ITEM -->
+    <div class="d-flex align-items-center bg-white gap-1 px-2 py-2 border-top dropdown">
+      <div class="d-flex align-items-center ">
+        <div>
+          <i class="fa-solid fa-chair"></i>
+        </div>
+        <div id="side-category-menu-drop" class="btn-group dropend ms-1">
+          <button id="denemebutton" type="button" class="btn btn-secondary  text-dark bg-white text-black" data-bs-toggle="dropdown"
+            aria-expanded="false">
+            Dropright
+          </button>
+          <ul class="sidebar-category-menu-item dropdown-menu ">
+            <li>sadfasfdsdsdf</li>
+          </ul>
+        </div>
+      </div>
+      <div class="">
+        <i class="fa-solid fa-angle-right"></i>
+      </div>
+    </div>
+  </div>
+  
+
+  <div id="carouselExampleControls" class="carousel slide" data-bs-ride="carousel">
+    <div class="carousel-inner">
+      <div class="carousel-item active">
+        <img src="https://picsum.photos/200" class="d-block w-100" alt="..." />
+      </div>
+      <div class="carousel-item">
+        <img src="https://picsum.photos/200" class="d-block w-100" alt="..." />
+      </div>
+      <div class="carousel-item">
+        <img src="https://picsum.photos/200" class="d-block w-100" alt="..." />
+      </div>
+    </div>
+    <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleControls" data-bs-slide="prev">
+      <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+      <span class="visually-hidden">Previous</span>
+    </button>
+    <button class="carousel-control-next" type="button" data-bs-target="#carouselExampleControls" data-bs-slide="next">
+      <span class="carousel-control-next-icon" aria-hidden="true"></span>
+      <span class="visually-hidden">Next</span>
+    </button>
+  </div>
+
+  <script>
+    document
+      .querySelector("#closeSideNav")
+      .addEventListener("click", function () {
+        document.querySelector("#mySidenav").style.display = "none";
+        console.log("asdfs");
+      });
+
+    document.querySelector("#SideNav").addEventListener("click", function () {
+      document.querySelector("#mySidenav").style.display = "block";
+      console.log("asdfs");
+    });
+
+    document
+      .querySelector("#SideNavMobile")
+      .addEventListener("click", function () {
+        document.querySelector("#mySidenav").style.display = "block";
+        console.log("asdfs");
+      });
+
+    document
+      .querySelector("#myLeftMenuContainer")
+      .addEventListener("click", function () {
+        document.querySelector("#leftSideMenu").style.display = "none";
+        console.log("asdfs");
+      });
+
+    document
+      .querySelector("#sideHamburgermenu")
+      .addEventListener("click", function () {
+        document.querySelector("#leftSideMenu").style.display = "block";
+        console.log("asdfs");
+      });
+
+
+      document.querySelector(".sidebar-category-menu-item").addEventListener('click', function (event) {
+        alert("click outside");
+        event.stopPropagation();
+    });
+  </script>
+
+  <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.9.2/dist/umd/popper.min.js"
+    integrity="sha384-IQsoLXl5PILFhosVNubq5LC7Qb9DXgDA9i+tQ8Zj3iwWAwPtgFTxbJ8NT4GN1R8p"
+    crossorigin="anonymous"></script>
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.min.js"
+    integrity="sha384-cVKIPhGWiC2Al4u+LWgxfKTRIcfu0JTxR+EQDz/bgldoEyl4H0zUF0QKbrJ0EcQF"
+    crossorigin="anonymous"></script>
+</body>
+
+</html>
